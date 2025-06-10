@@ -2,4 +2,233 @@
 \begin{document}
 \section*{The Pragmatic Programmer}
 Notes and excerpts from *The Pragmatic Programmer*.
+
+\section*{Goals for Consistent Learning}
+\begin{enumerate}
+    \item Learn AT LEAST one new language every year
+        \begin{itemize}
+            \item It's incredibly important for you to diversify your skills and attempts to really comprehend the inner workings of several different languages, their limitations, and why they work so well in the environments they were built for.
+        \end{itemize}
+    \item Read a technical book every month
+        \begin{itemize}
+            \item You've already started doing this by reading this book! Audio books are also a great resource, and the sorts of technical books that work well for audio books are those that don't necessarily code, but emphasize specific traits and qualities. "How Google Works" is a great example of this!
+        \end{itemize}
+    \item Read non-technical books each month
+        \begin{itemize}
+            \item You've been doing this your whole life! You LOVE to read, especially those Stephen King books. You've been branching out recently into the more psychology type of stuff, which is totally fine! So long as you continue learning and growing, you're doing something to keep yourself active!
+        \end{itemize}
+    \item Take Classes
+        \begin{itemize}
+            \item As of writing this in summer 2025, this is not a difficult task... You're taking two classes a semester including summers, plus some other courses from places like Udemy and Scrimba. Honesltly, if you would've focused up this much in college, you would've been muuuuch further along by now. BUT, that doesn't matter... Everyone has their own path, and this has been yours. No need to dwell on that past, just on the future!
+        \end{itemize}
+    \item Participate in local groups and meetups
+        \begin{itemize}
+            \item This is something you struggle with. In college, you were a part of SOOO many groups, but didn't quite meaningfully contribute to any of them besides Spikeball and the Texas SpaceCraft Lab. If you would've put in some extra work and taken yourself away from trying to do everything all at once, you probably could've learned more. But, that's what college is all about! It would probably be good to get involved in a MakerSpace of something after work hours, and just see what happens. There's one literally down the street from you... might be time to get involved in that?
+        \end{itemize}
+    \item Experiment with Different Environments
+        \begin{itemize}
+            \item This is really talking about different IDE's, living spaces, OS environments, etc. You've done a better job at this recently, getting a MAC and a raspberry pi for linux based stuff, and you actually use a variety of IDE's. I'm sure there's other paths to go down in terms of this, but for now I think that you're doing this pretty good!
+        \end{itemize}
+    \item Stay Current
+        \begin{itemize}
+            \item This is also something you have been doing much better about, although admittedly you could be doing more. Newsletters, reading engineering blogs from different companies, etc, instead of just LinkedIn being your source would be a way better idea. However, with so much knowledge to consume, it would be difficult to stay on top of things, which is why I've toyed with the idea of building an LLM to scrape the internet for new things and give a summary of what I want, then I can go and find something that I want to read that day.
+        \end{itemize}
+\end{enumerate}
+
+\section*{Tips From The Book:}
+\begin{enumerate}
+    \item Care About Your Craft
+    \item Think About Your Work
+    \item You Have Agency
+        \begin{enumerate}
+            \item Basically, you can change your environment. Don't do things that you hate
+        \end{enumerate}
+    \item Provide Options, Don't Make Excuses
+    \item Don't Leave Broken Windows
+        \begin{enumerate}
+
+            \item It is YOUR job to keep the code maintainable, clean, and easy to change, just as it is everyone else's. Don't leave it around, else entropy will surely find your project and eat it alive
+        \end{enumerate}
+    \item Be a Catalyst For Change
+        \begin{enumerate}
+            \item It is YOUR job to be the change that you want to see. If something goes wrong, take responsibility. If something goes right, take responsibility. Either way, be the driving force behing forward progress, not meaningless spiraling
+        \end{enumerate}
+    \item Remember the Big Picture
+    \item Make Quality a Requirements Issue
+    \item Invest Regularly in Your Knowledge Portfolio
+    \item Critically Analyze What You Read and Hear
+    \item English is Another Programming Language
+        \begin{enumerate}
+            \item Essentially, it is just as important for you to be as precise and methodical with the spoken word as you are with your programming language of choice. Precise and accurate language in this context helps achieve your goal
+            \item It is possible to get your point across without a vast thesaurus of words in your brain. Pictures and words can operate just as well, but you still need to share the same language as everyone else. Learn the terminology, then you can really get into the meat and potatoes of how things work
+        \end{enumerate}
+    \item It's What You Say and the Way You Say It
+    \item Build Documentation, Don't Bolt It On
+        \begin{enumerate}
+            \item Your code IS documentation, if written well... so write it well!
+        \end{enumerate}
+    \item Good Design Is Easier to Change than Bad Design
+    \item Don't Repeat Yourself
+    \item Make It Easy To Reuse
+    \item Eliminate Effects Betwen Unrelated Things
+        \begin{enumerate}
+            \item Reduce Coupling as Much as Possible
+        \end{enumerate}
+    \item There Are No Final Decisions
+    \item Forgo Following Fads
+    \item Use Tracer Bullets To Find Targets
+        \begin{enumerate}
+            \item Tracer Bullets are bullets specially made for military to see feedback on their shot in real time: they leave trails of smoke on their way to a target
+            \item In the same way, your code should be a tracer for portions of a project that point the path and leave a trail to how you got to the current stage.
+            \item This code should also be easy to change
+            \item It is recommended that Tracer code be built to connect parts of a project that you might not be sure how to connect, such as syncing a frontend and a backend. Once that tracer code works, you can refactor and continue expanding on the project from there, fleshing out individual systems rather than focusing on the connection between the systems. This way, you no longer have to focus on building out the system end-to-end, but piece-by-piece
+        \end{enumerate}
+    \item Prototype to Learn
+    \item Program Close To The Problem Domain
+    \item Estimate To Avoid Surprises
+    \item Iterate the Schedule with the Code
+    \item Keep Knowledge in Plain Text
+    \item Use the Power Of Command Shells
+    \item Achieve Editor Fluency
+    \item Always Use Version Control
+    \item Fix the Problem, Not the Blame
+        \begin{enumerate}
+            \item Don't put a band-aid on the problem, find the root cause and fix it
+        \end{enumerate}
+    \item Don't Panic
+    \item Failing Test Before Fixing Code
+        \begin{enumerate}
+            \item You should write your tests BEFORE you write your Code
+            \item Don't get test happy... that's a poor decision. You don't need to test if a class exists, just test for if it has the functionality that you think it does
+            \item The book outlines that if you start designing your tests first, you almost guarantee yourself to write the minimum amount of code possible to pass that test. If you need to flesh it out later with additions based on future code, you can!
+        \end{enumerate}
+    \item Read The Damn Error Message
+    \item "select" Isn't Broken
+        \begin{enumerate}
+            \item Chances are, the OS isn't broken, the framework doesn't have a bug, and your language of choice works fine, you're just using it wrong
+            \item Take a step back and see what happens when you actually look into what the function does
+        \end{enumerate}
+    \item Don't Assume, Prove It
+    \item Learn A Text Manipulation Language
+        \begin{enumerate}
+            \item Perl
+            \item emacs
+            \item bash
+            \item awk
+        \end{enumerate}
+    \item You Can't Write Perfect Software
+    \item Design With Contracts
+        \begin{enumerate}
+            \item You shouldn't be doing multiple mutations of data inside of a method. 
+            \item If you want to edit data, make sure the data meets the requirements that the data needs to pass through the function without issue
+        \end{enumerate}
+    \item Crash Early
+        \begin{enumerate}
+            \item If you crash, you know that you have a problem
+            \item Something interesting is that they say you should leave your assertions in the program. That way you can know EXACTLY where the program crashed... how interesting
+        \end{enumerate}
+        \item Use Assertions To Prevent the Impossible
+    \item Finish What You Start
+        \begin{enumerate}
+            \item The same function that allocates a resource should also deallocate it
+        \end{enumerate}
+    \item Act Locally
+    \item Take Small Steps... Always
+    \item Avoid Fortune Telling
+        \begin{enumerate}
+            \item Don't count on tomorrow looking like today. Business needs change all the time, and your code could look INSANELY different. Be flexible, be ready for change, which is why it's even more important for your code to be the same way
+        \end{enumerate}
+    \item Decoupled Code Is Easier To Change
+    \item Tell, Don't Ask
+        \begin{enumerate}
+            \item Don't make decisions based on the internal state of an object, then update that object. BAAAD idea
+        \end{enumerate}
+    \item Don't Chain Method Calls
+    \item Avoid Global Data
+    \item If It's Important Enough To Be Global, Wrap It in an API
+    \item Programming is about Code, Programs are About Data
+    \item Don't Hoard the State, Pass it Around
+        \begin{enumerate}
+            \item Data is a flowing river. It is meant to be passed around. Don't tie it to a particular group of functions
+        \end{enumerate}
+    \item Don't Pay Inheritance Tax
+        \begin{enumerate}
+            \item Inheritance has it's downfalls... You pass methods and variables down to other classes, and changing them has a cascading effect downwards
+            \item Multiple Inheritance can eventually lead to bigger issues if done incorrectly
+            \item Interfaces, Delegations, or Mixins/traits will be better alternatives
+            \item Inheritance can be used as a last resort
+        \end{enumerate}
+    \item Prefer Interfaces To Express Polymorphism
+    \item Delegate To Services
+        \begin{enumerate}
+            \item Services are useful ways to implement functions across multiple spaces without delegating them to the class itself. 
+            \item A good example is Angular Web Development: You can literally have a service for anything. It just helps to separate the function from the class where possible if you're going to have multiple places where a function is being called
+        \end{enumerate}
+    \item Use Mixins to Share Functionality
+    \item Parameterize Your App Using External Configuration
+    \item Analyze Workflow to Improve Concurrency
+        \begin{enumerate}
+            \item Most of the time, nothing that you do has to be done at the same time. 
+            \item This is most prevalent in today's day and age, when data is at an all time high and needs to be processed efficiently
+        \end{enumerate}
+    \item Shared State is Incorrect State
+    \item Random Failures are Often Concurrency Issues
+    \item Use Actors For Concurrency Without Shared State
+        \begin{enumerate}
+            \item Actor: Individual virtual processor with its own private state. Each one has a mailbox and kicks into life when the mailbox has anything. Can create other actors
+            \item Process: a more general purpose virtual processor implemented by the OS
+        \end{enumerate}
+    \item Use BlackBoards to Coordinate Workflow
+        \begin{enumerate}
+            \item When the order of information doesn't matter, a blackboard system is GREAT instead of using threads with a shared state
+        \end{enumerate}
+    \item Listen to Your Inner Lizard
+        \begin{enumerate}
+            \item Your instincts aren't necessarily correct, but there's a reason that they are kicking in. Try to understand what's happening and what they're saying, and you'll be better off for it down the line.
+        \end{enumerate}
+    \item Don't Program by Coincidence
+        \begin{enumerate}
+            \item There are many developers that code bit by bit, get it to work, but don't understand why it's working. DO NOT DO THIS. 
+            \item This is becoming more commonplace in a world where the barrier to entry for normal people is getting lower: people use AI to solve their problems, but they don't understand why the solution works, so they don't know how to fix it
+        \end{enumerate}
+    \item Estimate the Order of Your Algorithms
+    \item Test the Order of Your Estimates
+    \item Refactor Early, Refactor Often
+        \begin{enumerate}
+            \item You should refactor when you learn something new! That's all the time!
+        \end{enumerate}
+    \item Testing is Not About Finding Bugs
+    \item A Test Is The First User of Your Code
+    \item Build End-to-End, Not Top-Down or Bottom Up
+    \item Design to Test
+    \item Test Your Software or Your Users Wills
+    \item Use Property Based tests to Validate Your Assumptions
+    \item Keep It Simple and Minimize Attack Surfaces
+    \item Apply Security Patches Quickly
+    \item Name Well; Rename When Needed
+    \item No One Knows Exactly What They Want
+    \item Programmers Help People Understand What They Want
+    \item Requirements Are Learned In A Feedback Loop
+    \item Work with a User to Think Like a User
+    \item Policy is Metadata
+    \item Use a Project Glossary
+    \item Don't Think Outside the Box - Find the Box
+    \item Don't Go into the Code Alone
+    \item Agile is Not a Noun, Agile is How You Do Things
+    \item Maintain Small, Stable Teams
+    \item Schedule It to Make It Happen
+    \item Organize Fully Functional Teams
+    \item Do What Works, Not What's Fashionable
+    \item Deliver When Users Need It
+    \item Use Version Control to Drive Builds, Tests, and Releases
+    \item Test Early, Test Often, Test Automatically
+    \item Coding Ain't Done 'Til All The Tests Run
+    \item Use Saboteurs to Test Your Testing
+    \item Test State Coverage, Not Code Coverage
+    \item Find Bugs Once
+    \item Don't Use Manual Procedures
+    \item Delight Users, Don't Just Deliver Code
+    \item Sign Your Work
+    
+\end{enumerate}
 \end{document}
