@@ -467,4 +467,94 @@ Notes and excerpts from *The Pragmatic Programmer*.
     \hline
     \end{tabularx}
 
+\section{It's Your Life}
+    \paragraph{Summary}
+    Work How You Work Best! So long as you have good knowledge and skillset, there's not much reason for you to work in a way that is uncomfortable to you or that discourages active thought. Do things that you want to do, so long as it is done ethically and in the service of good
+
+\section{The Cat Ate My Source Code}
+    \paragraph{Summary}
+    It is your job to maintain integrity above all else. You are responsible for your code, and not meant to fork blame over to people or circumstances that are not actually the problem.
+
+\section{Software Entorpy}
+    \paragraph{Summary}
+    Things have a tendancy to spiral out of control really fast. There is this proclivity to allow the disorganized nature of things become more disorganized. Their "broken window" theory speaks to this very well. An untouched car in the middle of SF will get no attention, but the moment \textbf{ONE} window breaks, the rest start breaking in exponentially faster rates.
+
+\section{Stone Soup and Boiled Frogs}
+    \paragraph{Summary}
+    They tell a fable about three soldiers that fool a town into helping prepare real soup. It's just as easy to trick a group of people into all contributing to a project that you believe is good for the team, just as it is to allow things to become slowly dysfunctional. The concept of the boiled frog is also introduced. If a frog is put into an already boiling pot, or the pot is heated up too quickly, the the frog will jump out. Alternatively, the frog will not jump out of the pot if you slowly heat it up
+
+\section{Good-Enough Software}
+    \paragraph{Summary}
+    Quality should be mandatory. You are an artist painting a mural with your code. However, every artist has to take a step back from their art and know when it it "good enough" for now. You can never write the perfect code EVER. Don't try to
+
+\section{Your Knowledge Portfolio}
+    \paragraph{Summary}
+    Our knowledge portfolio should be ever expanding, and not a moment of our time wasted. Don't let any moment go without you learning something at some point. It is an unfortunate circumstance that there is so much knowledge at our disposal and yet we waste so much time doing so many menial things. This is also where the concept of increasing your knowledge portfolio is introduced, and those concepts are at the start of this paper. We also introduce "Asking the 5 Why's" to help understand why something occurs.
+
+\section{Communicate!}
+    \paragraph{Summary}
+    Being a good communicator is an essential part of being a good software engineer. There are many different forms of communication, and it is not imperative that you are fluent in everything, but you should be fluent in a few. Your spoken language of choice should be one of these. Documentation should be another. Communicating through comments and code is also something that should be emphasized, since there will be points in time where you come into contact with pieces of information that other people may not intuitively understand, and thus you need to emphasize your point
+
+\section{The Essence of Good Design}
+    \paragraph{Summary}
+    Make your code easy to change. That's really all this section is about.
+
+\section{DRY-The Evils of Duplication}
+    \paragraph{Summary}
+    Duplication is said that it should never happen in your code. However, the concepts that come about this aren't always as obvious as this rule may seem. Not all code is duplication. Some places contain different kinds of knowledge, and so similar code that could be made into one function might not actually count for the DRY principle. However, you still tend to replicate code that has already been made by 
+    \begin{enumerate}
+        \item Trying to recreate portions of code that already exist in libraries and API's
+        \item Newer team members reimplementing existing functions
+    \end{enumerate}
+    So, it is your job to keep things clean an organized, across your ENTIRE project. That means your frontend and backend services aren't doing the same data validation, stuff like that
+
+\section{Orthogonality}
+    \paragraph{Summary}
+    Orthogonality is a geometry concept discussing how two lines interact and but do not completely effect each other, i.e the removal of one line does not impact the function of the other line. In a similar way, your code should be orthogonal, meaning that you shouldn't need to do a full refactor of your entire codebase if you take out a service. Keeping your code decoupled and avoiding global data is essential to building orthogonal systems. Part of this includes using resources that are non-volatile in terms of change.
+    \subsection*{An Example of An Orthogonal System}
+    A helicopter: trying to change the speed of the rotor will effect the height, but you also need to adjust the pitch and the yaw of the back rotor to properly calibrate. When one system changes, all of them change. Don't be a helicopter. Avoid this at all costs.
+    
+\section{Reversibility}
+    \paragraph{Summary}
+    The needs of a business and the cost effectiveness of certain tools are ALWAYS subject to change. Do everything in your power to utilize architecture that is solid and flexible, as well as building systems independent of each other. Make decisions that are able to be reversed, because they will bite you in the ass later down the line. Also, do not follow industry fads or trends, because hype trains usually go so fast that they derail VERY quickly.
+
+\section{Tracer Bullets}
+    \paragraph{Summary}
+    Tracer Bullets are incredibly useful for a variety of reasons, but for code, it's a great way for you to integrate different parts of your system into each other and attempt to get a bunch of the pieces together. It's quick, it's dirty and it's also a reason to get to your users early. It also gives you a better feel for your progress. However, this is not the equivalent of a prototype. Prototypes are meant to be representations of the full product, not some wild bullet that probably didn't hit it's mark.
+
+\section{Prototypes and Post-it Notes}
+    \paragraph{Summary} Prototypes are really good for quickly building up mockups of the finished product, and can be readily available for people to test. For these purposes, use languages that are easy to use, such as Python or Ruby, when creating these applications, as you plan to throw the prototype away anyway. You should really be prototyping to learn things, not to keep a product.
+
+\section{Domain Languages}
+    \paragraph{Summary} Domain languages are good for a couple types of problems. These are made for VERY specific tasks. Things like cucumber, Ansible, or Phoenix are examples of these. YAML and JSON are also other forms. For the most part, you don't have to make your own domain language, but it is encouraged to know how if you ever need the use case.
+
+\section{Estimates}
+    \paragraph{Summary} At the end of the day, the best thing to say is \textit{I'll get back to you}. Estimating is a skill in it of itself... knowing how much data, or how many servers, or how much time is going to take is something that comes with experience. Avoid giving several numbers if possible, since saying something along the lines of \textit{20, 30 hours if you're going to give me buffer} is more confusing than it is helpful.
+
+\section{The Power of Plain Text}
+    \paragraph{Summary} Plain text is a universal language that is commonly used in the Computer Science world. HTML, JSON, YAML, whatever it is that you think acts as kind of a "markup" language is probably plain text. These are easy to search through and easy to find information. Take Unix for example. Everything in there is stored in plain text, there is no if's and's or but's about it. It's pretty simple and straightforward: When in doubt, plain text it out.
+
+\section{Shell Games}
+    \paragraph{Summary} The shell is where the highest amount of productivity is found. If you learn your shell commands, the productivity soars because typing on a keyboard is way faster than trying to accurately click around with a mouse. Even better, modifying your shell by creating your own custom commands/snippets that you often use is an even better way to get to the places you want to go, and FAST
+
+\section{Fluency}
+    \paragraph{Summary} By their definition, fluency is the ability to navigate around your IDE without using your mouse. After trying this out for a couple weeks, I completely agree. In fact, the only way to achieve true fluency is to ONLY be using the keyboard in most circumstances, and a mouse whenever else. This is something that is going to take practice and patience in the best of times, but it's going to be completely necessary in the coming years when you are really trying to crank out high level projects at rapid speed. There's not going to be time for thinking, just reacting. Same as with your Spikeball... at this point, it's just a dance, so natural to you that you've become one with the 360 game. The same should happen with your coding. The machine needs to become an extension of your hands. They also encourage to create extensions whenever you need to, or find extensions that fix the problems that you have.
+
+\section{Version Control}
+    \paragraph{Summary} Version Control is our gift from the engineering gods to let us undo any mistake we have ever made and beg for forgiveness. On good teams, this is a vital tool to allow to rollback to previous versions of a working project, or undo a commit that someone fat fingered and broke the entire thing. Now, here's the thing, shared directories are NOT version control. Having a shared directory in a local file system is tedious and unruly, and having one doesn't have branches that people can independently work on or do individual testing. Sure, you might be able to roll some things back if the internal system has a file history system like a Windows machine, but you're better off using something that hasn't been developed by your own team. Good version control software has multiple functions besides just version control, such as Kanban boards for project stories and AGILE methodology.
+
+\section{Debugging}
+    \paragraph{Summary} Debugging is an art in it of itself. There's really only one real way to do it as well: with a cool clear head and an aptitude for fixing something. Something to keep in mind that is a good practice is creating tests that fail on purpose to prove that your assumptions about any sort of data are correct. You should be able to prove your assumptions are accurate. Debugging also comes from talking to your users! Say there is a user experiencing an issue, and you are "replicating the issue" but not getting an error, then there's something that you are missing. Go to your user and have them do it right in front of you. That way you can know the exact steps. Language is a low bandwidth for of communciation, action is better. Also... read the damn error message. Most of the time error messages nowadays are pretty verbose in their writing, and the source cause is actually pretty accurate nowadays compared to a couple of years ago. Let the error message guide you to the solution. On top of ALL of this... the issue with the code probably isn't a function in it of itself, but your understanding of it. "select" isn't broken is a phrase that is referred to when an engineer claims his Linux OS is broken, but then realizes that the way he is using select is inherently flawed. Don't be that guy. Look into how things are working, and understand them in their entirety.
+
+\section{Text Manipulation}
+    \paragraph{Summary} Text manipulation can be difficult to master but once achieved make certain aspects of the job much easier. The authors of this book used a combination of Ruby and Python to update and manipulate different versions of this book, as they can have a text version, an online version, and other such versions have have strange little nuances into how they show up. 
+
+\section{Engineering Daybook}
+    \paragraph{Summary} Daybooks are a great way to keep track of little nuances about your day and pieces of information that you want to remember. You've learned the hard way that you're not going to remember everything all at once, because your brain wants to store things in there like muscle memory and deep insights from experiences, not trivial facts about why you chose to write that piece of code in that particular fashion. It's exhausting to try and rememeber everything, and the smartest people in the world don't try either! They write all the trivial stuff down so that they can focus on the actual thinking behind things. Don't try and be a hero... you're not better than anyone, you're not some crazy savant, you're a human being just like the rest of them, and in order for you to operate on a different level you need to start clearing your mind up for that kind of thinking!
+
+\section{Design by Contract}
+    \paragraph{Summary} Design by contract is the method that is taken to create a function or method that executes good data and good data only. Essentially, when you are calling a method, it is in your best interests to make sure your worldview about the conditions before and after you call the function are the same that you think they are.
+
+\section{Dead Programs Tell No Lies}
+    \paragraph{Summary} Allow your programs to die so that you can collect the proper data from them. It's pretty important for you to know what's going on with your programs and why they might be crashing. But, instead of doing a bunch of log messages, you can either write some asserts to prove that the intended funcionatlity exists OR just let it die and see where it happened.
 \end{document}
