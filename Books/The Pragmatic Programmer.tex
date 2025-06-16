@@ -557,4 +557,19 @@ Notes and excerpts from *The Pragmatic Programmer*.
 
 \section{Dead Programs Tell No Lies}
     \paragraph{Summary} Allow your programs to die so that you can collect the proper data from them. It's pretty important for you to know what's going on with your programs and why they might be crashing. But, instead of doing a bunch of log messages, you can either write some asserts to prove that the intended funcionatlity exists OR just let it die and see where it happened.
+
+\section{Assertions}
+    \paragraph{Summary} This chapter gives a case as to why you should leave assertions in your code, even when deploying to a production environment. Assertions are meant to check if the reality that you believe to be true is occuring, preventing your program from continuing onwards indefinitely until it crashes. Logging messages can lie... those logs that you are looking at could be occurring long after the problem actually happens further upstream. If you assert during critical points, such as before and after a method executes, you guarantee the behavior that you are looking for.
+
+\section{How To Balance Resources}
+    \paragraph{Summary} This section mainly talks about good practices when opening and closing resources, mainly reading and writing files, how to open and close them, and where to close based on where you opened. It is a tricky subject, since you're never guaranteed to reach your close statement, and so you have to write it in try-catch statements in order to conceivably get to the desintation that you are looking for 
+
+\section{Don't Outrun Your Headlights}
+    \paragraph{Summary} \textit{Don't Outrun Your Headlights} is a phrase synonymous with crashing into something or driving off a road in the dark: you're going to fast to be able to react to what's right in front of you. It's a scary thing, and in order to avoid any disaster in pitch black, you need to match a speed so that you can quickly react without being in danger. This is the equivalent for the programmer as well; take small steps to avoid disaster. Prediction of the future is one of the hardest things in the world to accomplish, and if you try to do such a thing, chances are you will run yourself off the cliff in the long run.
+
+\section{Decoupling}
+    \paragraph{Summary} Decoupling code is a job in itself sometimes. Keeping it all separated comes in many forms. Here are a couple: Ask, Don't Tell is one of their mottos for when you should only insert data into a method that is clean. They would rather you don't chain method calls, as those methods are subject to change themselves, and using the chaining rules like in Java can cause some nasty side effects. Additionally, removing globalization i.e don't use global variables ever. You can wrap them in a an API or service if you really want to, but there's very little reason to make something global.
+
+\section{Juggling the Real World}
+    \paragraph{Summary} There are several ways to juggle the async world that is production, and many methods are suggested here: events, Finite State Machines (FSM), Publisher-Subscriber i.e pubsub, and in the world of the web, Observables aka reactive programming. events are as simple as button clicks, and can be fed into all of these other methods to similitude a fluid dynamic environment. It would be useful to become a little more familiar with the FSM and pubsub methods, as they are (as of writing this) a little foggy in implementation. However, the Observables are something that I am mildly comfortable with, so I think it's best for now not to focus on those as much when practicing my coding ability.
 \end{document}
