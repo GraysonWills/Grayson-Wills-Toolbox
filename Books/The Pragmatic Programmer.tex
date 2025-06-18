@@ -572,4 +572,31 @@ Notes and excerpts from *The Pragmatic Programmer*.
 
 \section{Juggling the Real World}
     \paragraph{Summary} There are several ways to juggle the async world that is production, and many methods are suggested here: events, Finite State Machines (FSM), Publisher-Subscriber i.e pubsub, and in the world of the web, Observables aka reactive programming. events are as simple as button clicks, and can be fed into all of these other methods to similitude a fluid dynamic environment. It would be useful to become a little more familiar with the FSM and pubsub methods, as they are (as of writing this) a little foggy in implementation. However, the Observables are something that I am mildly comfortable with, so I think it's best for now not to focus on those as much when practicing my coding ability.
+
+\section{Transforming Programming}
+    \paragraph{Summary} A simple premise is introduced here: Programming is about code, programs are about data. Transformational programming is seen as a way to transform data in order to ascertain a specific output. For example, the first problem set is asking how to find the best way to see the top 5 files with the most characters. We then see a terminal input command with several pipes that feed information through to the end in order to find the files. Essentially, transformational programming is piping information in a coherent way to a designate goal. It's a series of nested transformations that is meant to simplify your code and make it easier to read in the long run.
+
+\section{Inheritance Tax}
+    \paragraph{Summary} Inheritance doesn't really seem to be a reliable answer in most cases, and here's why. Inheritance tends to make code immensely coupled, especially for languages like Python that allow for multiple inheritance OR for multiple subclassing down long roads. There are a couple ways to skirt around this without immensely coupling your code: interfaces, API's/services, and mixins. Interfaces allow for polymorphism without inheritance, API's allow you to store information off board the class itself, and mixins help merge existing functionalities with new functionalities. Do everything in your power to avoid actual inheritance like the plague, because changing one command, variable name, or method will screw you to no avail.
+
+\section{Configuration}
+    \paragraph{Summary} You need external configuration files for values that may change after the application has gone live. This is the equivalent of Secrets in your database or on Github when you're doing your actions. Whatever it is that you may need to go live without other people seeing it, chances are you will need this. This also includes license keys.
+
+\section{Breaking Temporal Coupling}
+    \paragraph{Summary} Many programmers get stuck because they have difficulty thinking about things in non-linear time. Not everything in your program needs to be done at the same time, just like a bartender does not have to make pina coladas in one go. In fact, if you did end up making pina coladas in a linear fashion, that man would be fired on the spot. You should draw an activity diagram to determine what can be done at the same time and what can't.
+
+\section{Shared State is Incorrect State}
+    \paragraph{Summary} This section outlines the flaws of concurrency when attempting to access the same resource. Now, there are ways around this, like semaphores or mutexes, but there are still issues with when to claim the lock and when to release. Some languages take care of this for you, but typically this isn't a good idea if one of the threads fails and remains holding onto the lock. This becomes increasingly difficult the more resources that are in a shared state. This is why there are other methods encourages that will be outlined momentarily.
+
+\section{Actors and Processes}
+    \paragraph{Summary} Actors/Processes are a provided substitution for the threading locks/semaphores issues. Actors are implementors of different tasks, and are dead when their inbox is empty, then come alive when they have a message. It is a pretty simple implementation, but very powerful to avoiding the issues with a shared state. In this context, processes are also considered actors. Actors work equally well on all different architectures, from multi-cores to single cores.
+
+\section{Blackboards}
+        \paragraph{Summary} Blackboards are a basic way for multiple actors to perform a shared state analysis if you really need shared state. The thing about blackboards is that ANYTHING can go on them, and ANYONE can view the information on the blackboard. So in essence, you can get through a ton of information without having to worry about the order things are placed in, and you can put anything on the blackboard without worrying that your inclusion will effect the rest of the information. This comes at a cost since a lot of the action is indirect, so it's hard to keep track of all the moving parts associated with such a system.
+
+\section{Listen to Your Lizard Brain}
+    \paragraph{Summary} Your instincts tend to be the things that take you the furthest. If something feels wrong, chances are something might be wrong. But sometimes those instincts try to take a little bit more of the steering wheel than they are supposed to. For instance, when you are prototyping, it is not your job to create the perfect code, but your brain keeps telling you to refactor. Learn to talk yourself down from those heights and speak to your lizard brain, either by going on a walk, rubber ducking it, or writing a sticky note.
+
+\section{Programming by Coincidence}
+    \paragraph{Summary} Don't be the guy that just makes things up as he goes. This kind of programmer is becoming more and more prevalent as the years go on due to the rise of AI coding. It's going to be so easy in the next few years to be exceptional, so learn to do things the right way and you're going to be soaring to new heights!
 \end{document}
