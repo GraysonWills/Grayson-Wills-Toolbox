@@ -601,5 +601,44 @@ Notes and excerpts from *The Pragmatic Programmer*.
     \paragraph{Summary} Don't be the guy that just makes things up as he goes. This kind of programmer is becoming more and more prevalent as the years go on due to the rise of AI coding. It's going to be so easy in the next few years to be exceptional, so learn to do things the right way and you're going to be soaring to new heights!
 
 \section{Algorithm Speed}
-    \paragraph{Summary} You don't necessrily need to know the EXACT speed of your algorithm, but you need to get good at estimating it so that you know if you're doing something that's about to take 10 seconds or 10 years. It would be a very poor decision in the moment to choose the 10 years over the 10 seconds... so choose wisely.
+    \paragraph{Summary} You don't necessrily need to know the EXACT speed of your algorithm, but you need to get good at estimating it so that you know if you're doing something that's about to take 10 seconds or 10 years. It would be a very poor decision in the moment to choose the 10 years over the 10 seconds... so choose wisely.  
+
+\section{Refactoring}
+    \paragraph{Summary} When should you refactor? The answer is, all the time: when you learn something new tends to be the given answer. It can be a pain in the butt, alas, it's more important to remove those pesky little unreadable nuances than leave them for some poor soul to find later down the line, and it makes it muck easier on you as well... broken code doesn't seem all that broken until it breaks. Use your unit tests as a good marker for when you need to refactor. Pass a test, go back and clean it up.
+
+\section{Test to Code}
+    \paragraph{Summary} Here's a general rule of thumb: either you are testing your code, or your users are. In the end, you should be the one testing your code. It's almost an essential for when you are crafting any portion of your code. Trace messages and log files can be good for this. Your strategy should be implementing test driven design by testing against your contract, ie when you design by contract test against that. In that way, you are ensuring the behavior you desire.
+
+\section{Property-Based Testing}
+    \paragraph{Summary} Property based testing is a way to test that cherry picks individual methods instead of running data through the entire program. It's a neat way to ensure the properties of your data and make sure your methods aren't able to perform actions out of their control. 
+
+\section{Stay Safe Out There}
+    \paragraph{Summary} Essentially, everything that you know is an attack vector. Every input, every output, every log file, every button on your website is a way to gain access to your system. It is your job to minimize the surface area that someone can attack you. On another note, cryptography exists. However, don't do it yourself. For god's sake don't. It's not worth the time and the effort.
+
+\section{Naming Things}
+    \paragraph{Summary} It should be really easy to read a variable name or a method name and understand it's purpose. You need to name these types of things with regards to their overall intent, and be a precise while being as concise as possible. Feel free to refactor in these instances as necessary... sometimes things don't hold the same value or purpose as they once did.
+
+\section{The Requirements Pit}
+    \paragraph{Summary} Requirements can be a tricky thing to get right. Let's take an example from a book talking about a shipping company for books. You need to be able to drill deep into the problems about shipping that they wouldn't necessarily think about, under certain conditions. On top of that, it is your job to build it to the necessity of the user's needs... another example is mixing boards for DJ's. It is not in your user's best interests to be using a mixing board that requires mouse clicks. Rather, you should be turning dials and sliding sliders to connect the music to a physical sensation. It's also important that your requirements are abstract rather than super specific, like user stories. User stories are meant to detail specific implementation instructions, and are not necessary for the requirements stage when you are outlining what the user needs. It's best to create a project glossary in with the requirements document as well so it is clear to your team the terminology that you need to use.
+
+\section{Solving Impossible Puzzles}
+    \paragraph{Summary} Solving problems takes time, and sometimes you need to step away from the problem for a little bit and distract yourself in order to be able to put all the pieces together. Go out, take a walk, sleep, let your unconcious brain do all of the thinking when your conscious one can't. However, it helps to challenge those preconceived notions that you have put in place, and question everything about what you are dong. Sometimes those obvious solutions don't seem so obvious when you put yourself in a box and subjugate yourself to the methods/conceptions that everyone else has limited themselves to.
+
+\section{Working Together}
+    \paragraph{Summary} We talk a bit about programming and solving problems together: The classic "I'll drive, you navigate" motto comes to mind for pair and mob programming. I'll have to look into the specifics of these, as I don't necessarily want to just hop right into these without fully understanding correct techniques on how to communicate code effectively, but it would be good to pair program things as a way to understand how to communicate code on the fly. On top of that, we talk about Agile programming, mainly how it is supposed to be a method or description and not some arbitrary noun. It's an interesting way to decide how to get things done, but it makes sense. You should be able to nimbly and quickly make adjustments with your team, which stems from the idea of owning your decisions and being quick to move on or adapt to those situations.
+
+\section{Pragmatic Teams}
+    \paragraph{Summary} Pragmatic teams have a couple of qualities to them: small, quick, and automated. These teams should be able to communicate effectively both internally and externally. There shouldn't be much of a need to repeat yourself when communicating, and make sure that communication doesn't lead to you repeating any tasks. Effective communication goes a long way with these teams. Just like your personal development, you should be striving for the same expectation of development in your team in terms of knowledge sharing.
+
+\section{Coconuts Don't Cut It}
+    \paragraph{Summary} It's quite a shame to see that people will try to replicate the success of corporate giants and fail to understand why it hasn't been replicated. Cargo Cult is the name for this: bootstrapping methods from other people's success and expecting it to work for yourself. It won't, at least not to the same degree. You need to do it YOUR way, the way that works best for you. That means talking to your user's the best way that you know how. There is one thing that you should do that everyone else does: provide user value when the user needs it. 
+
+\section{Pragmatic Starter Kit}
+    \paragraph{Summary} Just a recap of everything talked about in the book: automate everything, use testing thoroughly, etc
+
+\section{Delight Your Users}
+    \paragraph{Summary} It is your job to delight your users and to build things for their enjoyment, not any purpose other than that. If your purpose is any other reason, chances are your technology will go out of date, fail, or become non-profitable. 
+
+\section{Pride and Prejudice}
+    \paragraph{Summary} Sign your work always. Show pride in the things that you do. It forces you to stick to the highest principles, and also allows people to know what you did and comment on how you can improve. Sign your work so that you may remain honest to what you do, and show that you are proud. That's what artists do, right?
 \end{document}
