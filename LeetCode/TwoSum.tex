@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{listings}
+\title{Two Sum}
+\author{Grayson Wills}
+\begin{document}
+\section{My Solution}
+\begin{lstlisting}
+    class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        myMap = {}
+        for index in range(0, len(nums)):
+            if target - nums[index] not in myMap:
+                myMap[nums[index]] = index 
+                continue
+            solution = [myMap[target - nums[index]], index]
+            return solution
+\end{lstlisting}
+\section{Recommended Solution}
+\begin{lstlisting}
+    class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        numMap = {}
+        n = len(nums)
+
+        for i in range(n):
+            complement = target - nums[i]
+            if complement in numMap:
+                return [numMap[complement], i]
+            numMap[nums[i]] = i
+
+        return []  
+\end{lstlisting}
+\section{Notes}
+The solution that I provided take a couple extra lines of code, and does not appear to account for the empty case like the recommended solution does. We are allowed to assume that there is a solution and ONLY one solution, but this kind of programming allows for leeway when there are cases where this is no longer a valid assumption.
+
+Additionally, the if statement asks for if the complement is currently in the map, whereas mine asks if it is NOT. This causes me a couple extra lines of code that I could remove. 
+
+Initializing the solution also gave me an extra line that I can take out, although it is cleaner to see that way. I will continue to provide the solution in such a way, since adding the initializer doesn't cause any issues, it's not an extra step in the compiler, and for future reference it would be easier to change/understand in the future what is happening
+\end{document}
