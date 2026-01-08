@@ -1,0 +1,91 @@
+\documentclass{article}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{listings}
+\title{Median of Two Sorted Arrays}
+\author{Grayson Wills}
+\begin{document}
+\section{My Solution}
+\begin{lstlisting}
+    class Solution:
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+        nums1Length = len(nums1)
+        nums2Length = len(nums2)
+        finalListLength = nums1Length + nums2Length
+        
+
+        nums1Index = 0
+        nums2Index = 0
+
+        mergedList = []
+
+        while nums1Index != nums1Length or nums2Index != nums2Length:
+            
+            if nums1Index == nums1Length:
+                mergedList.append(nums2[nums2Index])
+                nums2Index += 1
+                continue
+            
+            
+            if nums2Index == nums2Length:
+                mergedList.append(nums1[nums1Index])
+                nums1Index += 1
+                continue
+            
+
+            if nums1[nums1Index] >= nums2[nums2Index]:
+                mergedList.append(nums2[nums2Index])
+                nums2Index += 1
+
+            else:
+                mergedList.append(nums1[nums1Index])
+                nums1Index += 1
+            
+
+        if finalListLength % 2 != 0:
+            return mergedList[finalListLength//2]
+        
+        return (mergedList[(finalListLength // 2)] + mergedList[(finalListLength // 2) - 1])/2
+                    
+\end{lstlisting}
+\section{Recommended Solution}
+\begin{lstlisting}
+class Solution:
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+
+        # Since one of the arrays can be significantly longer than
+        # the other, we always perform binary search on the shorter
+        # array to ensure that the time complexity remains
+        # O(log(min(m, n))).
+        if len(nums1) > len(nums2):
+            return self.findMedianSortedArrays(nums2, nums1)
+
+        len1, len2 = len(nums1), len(nums2)
+        left, right = 0, len1
+
+        while left <= right:
+            part1 = (left + right) // 2
+            part2 = (len1 + len2 + 1) // 2 - part1
+
+            max_left1 = float('-inf') if part1 == 0 else nums1[part1 - 1]
+            min_right1 = float('inf') if part1 == len1 else nums1[part1]
+            max_left2 = float('-inf') if part2 == 0 else nums2[part2 - 1]
+            min_right2 = float('inf') if part2 == len2 else nums2[part2]
+
+            if max_left1 <= min_right2 and max_left2 <= min_right1:
+                if (len1 + len2) % 2 == 0:
+                    return (max(max_left1, max_left2) + min(min_right1, min_right2)) / 2
+                else:
+                    return max(max_left1, max_left2)
+            elif max_left1 > min_right2:
+                right = part1 - 1
+            else:
+                left = part1 + 1
+\end{lstlisting}
+\section{Notes}
+My solution goes about solving in a pretty straightforward manner. Merging both arrays, then finding the middle point. Simple enough, pretty efficient, and utilizes basic logic
+
+The second recommended solution uses Binary Search and recursion to find the proper answer, which does not need to create a newly sorted array, just traversing between the two arrays. It checks partitions betyween both in order to find where the middle number would be, and then pops out the final solution later on. This is not the most intuitive solution: while in the beginning I was trying to use math to find out if there was a way to do this, this goes beyond what I originally imagined the math to be. Will have to review binary search in order to get a full grasp on the situation
+
+Bright side, my code is easy to understand. It could be easier to read by fully utilizing Python's ability to combine the lists and sort them immedieatly. The "sorted" and "nums1 + nums2" would immediately do what I coded. However, I need the exercise in logic... it's been a while since I've written code, and even longer since I've been able to logically think about these types of things. So, I will learn how to do the pythonic way, alongside doing the logical portions.
+\end{document}
