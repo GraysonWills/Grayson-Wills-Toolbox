@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{listings}
+\title{Longest Substring}
+\author{Grayson Wills}
+\begin{document}
+\section{My Solution}
+\begin{lstlisting}
+    class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+
+        leftWindowIndex = 0
+        rightWindowIndex = 0
+        longestSubstring = 1
+        stringLength = 1
+        hashMap = {}
+
+        if len(s) == 0:
+            return 0
+        
+        if len(s) == 1:
+            return 1
+
+        while rightWindowIndex != len(s):
+            
+            if s[rightWindowIndex] in hashMap:
+                hashMap[s[rightWindowIndex]] += 1
+
+            else:
+                hashMap[s[rightWindowIndex]] = 1
+
+            while hashMap[s[rightWindowIndex]] > 1:
+                hashMap[s[leftWindowIndex]] -= 1
+                leftWindowIndex += 1
+                stringLength -= 1
+            
+            if stringLength > longestSubstring:
+                longestSubstring = stringLength
+            
+            rightWindowIndex += 1
+            stringLength += 1
+
+        return longestSubstring
+\end{lstlisting}
+\section{Recommended Solution}
+\begin{lstlisting}
+    class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        n = len(s)
+        maxLength = 0
+        charMap = {}
+        left = 0
+        
+        for right in range(n):
+            if s[right] not in charMap or charMap[s[right]] < left:
+                charMap[s[right]] = right
+                maxLength = max(maxLength, right - left + 1)
+            else:
+                left = charMap[s[right]] + 1
+                charMap[s[right]] = right
+        
+        return maxLength
+\end{lstlisting}
+\section{Notes}
+The solution that I provide is a less pythonic way of handling things. There is not a use of the max function, or any math involved in order to get to a solution. Instead of storing the number of occurrences of a character in the substring, the recommended solution is storing the index of the character, then comparing later on the index using the math of the left and the right. While both solutions use O(1) space, the recommended solution is more efficient in time management. (Note: Both are O(1), the second one uses a method of skipping to the closest non-repeated character, making it slightly more efficient than mine)
+\end{document}

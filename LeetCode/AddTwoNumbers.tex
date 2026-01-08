@@ -1,0 +1,72 @@
+\documentclass{article}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{listings}
+\title{Two Sum}
+\author{Grayson Wills}
+\begin{document}
+\section{My Solution}
+\begin{lstlisting}
+
+class Solution:
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        firstNum = 0
+        secondNum = 0
+        number = 0
+        
+
+        for i in range(0,2):
+            tenPosition = 1
+            if i is 1:
+                currentList = l1
+            else:
+                firstNum = number
+                currentList = l2
+                number = secondNum
+            while currentList is not None:
+                number += tenPosition * currentList.val
+                currentList = currentList.next
+                tenPosition *= 10
+                
+        solutionNum = firstNum + number
+        
+        solutionHead = ListNode(solutionNum % 10)
+        solution = solutionHead
+        while solutionNum // 10 is not 0:
+            solutionNum //= 10
+            solution.next = ListNode(solutionNum % 10)
+            solution = solution.next
+
+            
+        return solutionHead
+        
+
+\end{lstlisting}
+\section{Recommended Solution}
+\begin{lstlisting}
+class Solution:
+    def addTwoNumbers(
+        self, l1: Optional[ListNode], l2: Optional[ListNode]
+    ) -> Optional[ListNode]:
+        dummyHead = ListNode(0)
+        curr = dummyHead
+        carry = 0
+        while l1 != None or l2 != None or carry != 0:
+            l1Val = l1.val if l1 else 0
+            l2Val = l2.val if l2 else 0
+            columnSum = l1Val + l2Val + carry
+            carry = columnSum // 10
+            newNode = ListNode(columnSum % 10)
+            curr.next = newNode
+            curr = newNode
+            l1 = l1.next if l1 else None
+            l2 = l2.next if l2 else None
+        return dummyHead.next
+\end{lstlisting}
+\section{Notes}
+The solution that i provide runs and beats 100 percent of all other tests, which is a miracle in it of itself seemingly. I loop over both lists, and then create a new solution head
+
+The recommended solution creates no new variables at all! Which is astounding to me to say the least. But, it makes a lot of sense... you go node by node, hold onto the carry, and then transfer it over, and if there is no longer a matching length, or one number is longer than the other, you just carry on adding to the solution, nothing else required.
+
+Reminds me that I have a long way to go when it comes to preparation for any sort of real coding, and how rusty I am when it comes to this stuff. I'll figure it out eventually though. Just got to get back into the game!
+\end{document}
